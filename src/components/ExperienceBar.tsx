@@ -2,7 +2,7 @@ import styles from '../styles/components/ExperienceBar.module.css';
 
 export function ExperienceBar() {
   return (
-    <header className={styles.ExperienceBar}>
+    <header className={styles.experienceBar}>
       <span>8 xp</span>
         <div>
           <div style={{ width: '50%' }} />

@@ -10,8 +10,8 @@ export function Countdown() {
     const minutes = Math.floor(time /60);
     const seconds = time % 60;
 
-    const [minuteLeft, minuteRight] = String(minutes).padStar(2, '0').split('');
-    const [secondLeft, secondRight] = String(seconds).padStar(2, '0').split('');
+    const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
+    const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
     function startCountdown () {
         setActive(true);

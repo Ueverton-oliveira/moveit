@@ -5,7 +5,7 @@ import styles  from '../styles/components/Countdown.module.css'
 
 export function Countdown() {
     const [time, setTime] = useState(25 * 60);
-    const [active, setActive] = useState(false);
+    const [isactive, setIsActive] = useState(false);
 
     const minutes = Math.floor(time /60);
     const seconds = time % 60;
@@ -14,16 +14,16 @@ export function Countdown() {
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
     function startCountdown () {
-        setActive(true);
+        setIsActive(true);
     }
 
     useEffect(() => {
-        if (active && time > 0) {
+        if (isactive && time > 0) {
             setTimeout(() => {
                 setTime(time - 1);
             }, 1000)
         }
-    }, [active, time])
+    }, [isactive, time])
 
 
     return(

@@ -45,7 +45,7 @@ export function Countdown() {
                 className={styles.countdownButton}
                 onClick={startCountdown}
             >
-                Iniciar um ciclo
+                { isactive ? 'Abandonar ciclo' : 'Iniciar um ciclo'}
             </button>
         </div>
         
